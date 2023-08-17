@@ -10,16 +10,24 @@
     <title>Joha Wilson</title>
 
     <script src="https://kit.fontawesome.com/95bc93f676.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("XAx_NGI2tj6CUrx52");
+        })();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
 
     <header>
         <div class="row no-gutters">
-            <a class="col-md-4 logo" href="02-index.html"></a>
+            <a class="col-md-4 logo" href="index.html"></a>
             <div class="col-md-8">
                 <div class="row no-gutters bg-color-name-title">
                     <div class="col heading">
@@ -55,19 +63,54 @@
                 <h5 class="uppercase text-center">Let's work together!</h5>
 
                 <div class="center-form">
-                    <form>
-                        <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
-                        <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email" required />
-                        <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control" placeholder="Project description" required></textarea>
+                    <form onsubmit="return sendMail(this);" id="myForm" method="POST">
+        
+                        <input type="text" name="name" class="form-control" id="fullname" placeholder="Enter your full name" required>
+        
+                        <input type="email" name="email" class="form-control" id="emailaddress" placeholder="Email" required>
+        
+                        <textarea class="form-control" name="projectsummary" id="projectsummary" rows="10" placeholder="Project description" required></textarea>
+        
                         <div class="form-row text-center">
                             <div class="col">
                                 <button type="submit" class="btn btn-secondary">Send Project Request</button>
                             </div>
                         </div>
+        
                     </form>
                 </div>
 
             </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade my-modal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        
+            <div class="modal-dialog">
+        
+                <div class="modal-content">
+        
+                    <div class="modal-header grad">
+        
+                        <h5 class="modal-title" id="staticBackdropLabel">"</h5>
+        
+                    </div>
+        
+                    <div class="modal-body grad">
+        
+                    </div>
+        
+                    <div id="change-color" class="modal-footer">
+        
+                        <a href="/index.html"
+                            class=" nav-link navbar-nav p-2 return-home-btn ml-1  d-inline text-center">Return Home </a>
+        
+                    </div>
+        
+                </div>
+        
+            </div>
+        
         </div>
 
     </section>
@@ -132,6 +175,7 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript" src="assets/js/send-email.js"></script>
     
 </body>
 </html>
