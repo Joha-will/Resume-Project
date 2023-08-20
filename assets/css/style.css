@@ -44,6 +44,10 @@
     background-color: #525252;
 }
 
+.grey-smoke {
+    color: #E6E6E6;
+}
+
 /* ----------------------------------------Special paddings/margins/text */
 
 h1,
@@ -100,10 +104,26 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
+    width: 500px;
+    min-width: none;
+    height: 500px;
     min-height: 360px;
+    margin: 5% 10px 10% 20px;
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
+    box-shadow: 8.0px 16.0px 16.0px #1A1A1A;
+    border-radius: 10px;
+}
+
+.welcome-logo {
+    height: 80vh;
+    margin: 10% 0 0 0;
+    text-align: center;
+}
+
+#nav-bar-name {
+    font-family: 'Homemade Apple', cursive;
 }
 
 .name {
@@ -140,6 +160,9 @@ header {
     margin: 0;
 }
 
+.nav-height {
+    height: 10vh;
+}
 .menuitem {
     height: 120px;
     text-align: center;
@@ -184,6 +207,7 @@ footer {
     background-color: #525252;
     color: #fafafa;
     min-height: 120px;
+    height: 10vh;
     margin: 0;
 }
 
@@ -367,33 +391,22 @@ button[type="submit"] {
     background-color: #e84610;
 }
 
-/* ----------------------------------------Media Queries */
-
-@media(min-width: 992px) {
-    .center-form {
-        padding-top: 30px;
-        min-height: 240px;
-        margin: 0 auto;
-        max-width: 50%;
-    }
-}
-
 
 
 br {
     display: block;
     line-height: 1.6em;
-  }
-  
-  
-  
-  ol,
-  ul {
+}
+
+
+
+ol,
+ul {
     list-style: none;
-  }
-  
-  input,
-  textarea {
+}
+
+input,
+textarea {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -401,41 +414,41 @@ br {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     outline: none;
-  }
-  
-  blockquote,
-  q {
+}
+
+blockquote,
+q {
     quotes: none;
-  }
-  
-  blockquote:before,
-  blockquote:after,
-  q:before,
-  q:after {
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
-  }
-  
-  strong,
-  b {
+}
+
+strong,
+b {
     font-weight: bold;
-  }
-  
-  table {
+}
+
+table {
     border-collapse: collapse;
     border-spacing: 0;
-  }
-  
-  img {
+}
+
+img {
     border: 0;
     max-width: 100%;
-  }
-  
-  
-  
-  /* page structure */
-  
-  #search-area {
+}
+
+
+
+/* page structure */
+
+#search-area {
     display: block;
     max-width: 70%;
     margin: 0 auto;
@@ -447,55 +460,55 @@ br {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-  }
-  
-  #gh-api-data {
+}
+
+#gh-api-data {
     display: block;
     padding: 25px 0;
-  }
-  
-  #loader {
+}
+
+#loader {
     display: block;
     width: 200px;
     height: 200px;
     margin: 0 auto;
-  }
-  
-  
-  /* page content styles */
-  
-  .small-name {
+}
+
+
+/* page content styles */
+
+.small-name {
     font-size: 0.75em;
     color: #a9a9a9;
     font-style: italic;
-  }
-  
-  .avi {
+}
+
+.avi {
     float: left;
     margin-right: 7px;
     margin-bottom: 7px;
-  }
-  
-  .avi img {
+}
+
+.avi img {
     border: 1px solid #ccc;
     padding: 3px;
-  }
-  
-  .repo-list {
+}
+
+.repo-list {
     display: block;
     clear: both;
     width: 100%;
-  }
-  
-  .repo-list ul {
+}
+
+.repo-list ul {
     font-size: 1.2em;
-  }
-  
-  .repo-list ul li {
+}
+
+.repo-list ul li {
     display: block;
-  }
-  
-  .repo-list ul li a {
+}
+
+.repo-list ul li a {
     font-weight: bold;
     padding: 6px 9px;
     display: block;
@@ -515,9 +528,9 @@ br {
     background-image: -ms-linear-gradient(top, #5597d8, #3673af);
     background-image: -o-linear-gradient(top, #5597d8, #3673af);
     background-image: linear-gradient(top, #5597d8, #3673af);
-  }
-  
-  .repo-list ul li a:hover {
+}
+
+.repo-list ul li a:hover {
     background-color: #396895;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#4b87c2), to(#396895));
     background-image: -webkit-linear-gradient(top, #4b87c2, #396895);
@@ -525,31 +538,31 @@ br {
     background-image: -ms-linear-gradient(top, #4b87c2, #396895);
     background-image: -o-linear-gradient(top, #4b87c2, #396895);
     background-image: linear-gradient(top, #4b87c2, #396895);
-  }
-  
-  .repo-list ul li a:active {
+}
+
+.repo-list ul li a:active {
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  }
-  
-  .repo-list ul li a span {
+}
+
+.repo-list ul li a span {
     font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
     font-size: 0.9em;
-  }
-  
-  /* input field */
-  
-  #gh-username {
+}
+
+/* input field */
+
+#gh-username {
     display: block;
     padding: 5px 8px;
     font-size: 1.4em;
     color: #666;
     max-width: 550px;
     margin-bottom: 15px;
-  }
-  
-  #gh-submit {
+}
+
+#gh-submit {
     display: inline-block;
     padding: 8px 18px;
     font-size: 14px;
@@ -569,9 +582,9 @@ br {
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  }
-  
-  #gh-submit:hover {
+}
+
+#gh-submit:hover {
     background-color: #dadada;
     background-image: -webkit-linear-gradient(#eaeaea, #dadada);
     background-image: -moz-linear-gradient(#eaeaea, #dadada);
@@ -579,13 +592,33 @@ br {
     background-image: -o-linear-gradient(top, #eaeaea, #dadada);
     background-image: linear-gradient(#eaeaea, #dadada);
     border-color: #ccc #ccc #b5b5b5;
-  }
-  
-  #gh-submit:active {
+}
+
+#gh-submit:active {
     background-color: #dadada;
     background-image: none;
     border-color: #b5b5b5;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  }
+}
+
+
+/* ----------------------------------------Media Queries */
+
+@media(min-width: 992px) {
+    .center-form {
+        padding-top: 30px;
+        min-height: 240px;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        margin: 0 auto 200px auto ;
+    }
+
+    
+}
